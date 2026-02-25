@@ -11,8 +11,8 @@ android {
         applicationId = "com.example.cardcounter"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 3
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -52,4 +52,7 @@ dependencies {
     // 手动添加的依赖（用于 RecyclerView 和 ViewModel）
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    // 手动添加的依赖（确保已包含 ViewPager2 和 Material 库）
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
+    implementation("com.google.android.material:material:1.12.0")
 }
