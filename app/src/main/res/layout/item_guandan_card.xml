@@ -1,76 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="48dp"
     android:orientation="horizontal"
-    android:padding="8dp"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    android:paddingHorizontal="4dp">
 
-    <!-- 牌面名称 -->
+    <!-- 牌名 -->
     <TextView
         android:id="@+id/tvCardName"
-        android:layout_width="60dp"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center" />
 
-    <!-- 剩余总数 -->
+    <!-- 剩余数量 -->
     <TextView
         android:id="@+id/tvRemaining"
-        android:layout_width="50dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:gravity="center"
-        android:layout_marginEnd="8dp" />
+        android:textColor="#2196F3"
+        android:textStyle="bold" />
 
-    <!-- 四个玩家按钮，使用 LinearLayout 水平排列 -->
-    <LinearLayout
+    <!-- 上家数字（按钮） -->
+    <TextView
+        android:id="@+id/tvUpper"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/button_round_blue"
+        android:textColor="#FFFFFF"
+        android:paddingVertical="10dp" />
 
-        <Button
-            android:id="@+id/btnUpper"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="上家(0)"
-            android:textSize="12sp"
-            android:layout_marginEnd="2dp"
-            style="?android:attr/buttonBarButtonStyle" />
+    <!-- 自己数字（按钮） -->
+    <TextView
+        android:id="@+id/tvSelf"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/button_round_blue"
+        android:textColor="#FFFFFF"
+        android:paddingVertical="10dp" />
 
-        <Button
-            android:id="@+id/btnSelf"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="自己(0)"
-            android:textSize="12sp"
-            android:layout_marginEnd="2dp"
-            style="?android:attr/buttonBarButtonStyle" />
+    <!-- 下家数字（按钮）—— 注意现在放在对家前面 -->
+    <TextView
+        android:id="@+id/tvLower"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/button_round_blue"
+        android:textColor="#FFFFFF"
+        android:paddingVertical="10dp" />
 
-        <Button
-            android:id="@+id/btnPartner"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="对家(0)"
-            android:textSize="12sp"
-            android:layout_marginEnd="2dp"
-            style="?android:attr/buttonBarButtonStyle" />
-
-        <Button
-            android:id="@+id/btnLower"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="下家(0)"
-            android:textSize="12sp"
-            style="?android:attr/buttonBarButtonStyle" />
-
-    </LinearLayout>
+    <!-- 对家数字（按钮） -->
+    <TextView
+        android:id="@+id/tvPartner"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/button_round_blue"
+        android:textColor="#FFFFFF"
+        android:paddingVertical="10dp" />
 
 </LinearLayout>

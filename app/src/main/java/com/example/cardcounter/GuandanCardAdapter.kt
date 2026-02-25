@@ -3,35 +3,35 @@ package com.example.cardcounter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class GuandanCardAdapter(
     private val cards: List<GuandanCard>,
-    private val onPlayerClick: (cardIndex: Int, playerIndex: Int) -> Unit // 回调：卡片位置，玩家索引
+    private val onPlayerClick: (cardIndex: Int, playerIndex: Int) -> Unit
 ) : RecyclerView.Adapter<GuandanCardAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvCardName: TextView = itemView.findViewById(R.id.tvCardName)
         val tvRemaining: TextView = itemView.findViewById(R.id.tvRemaining)
-        val btnUpper: Button = itemView.findViewById(R.id.btnUpper)
-        val btnSelf: Button = itemView.findViewById(R.id.btnSelf)
-        val btnPartner: Button = itemView.findViewById(R.id.btnPartner)
-        val btnLower: Button = itemView.findViewById(R.id.btnLower)
+        val tvUpper: TextView = itemView.findViewById(R.id.tvUpper)
+        val tvSelf: TextView = itemView.findViewById(R.id.tvSelf)
+        val tvPartner: TextView = itemView.findViewById(R.id.tvPartner)
+        val tvLower: TextView = itemView.findViewById(R.id.tvLower)
 
         fun bind(card: GuandanCard, position: Int, listener: (Int, Int) -> Unit) {
             tvCardName.text = card.name
             tvRemaining.text = card.remaining.toString()
-            btnUpper.text = "上家(${card.playerCounts[0]})"
-            btnSelf.text = "自己(${card.playerCounts[1]})"
-            btnPartner.text = "对家(${card.playerCounts[2]})"
-            btnLower.text = "下家(${card.playerCounts[3]})"
 
-            btnUpper.setOnClickListener { listener(position, 0) }
-            btnSelf.setOnClickListener { listener(position, 1) }
-            btnPartner.setOnClickListener { listener(position, 2) }
-            btnLower.setOnClickListener { listener(position, 3) }
+            tvUpper.text = card.playerCounts[0].toString()
+            tvSelf.text = card.playerCounts[1].toString()
+            tvPartner.text = card.playerCounts[2].toString()
+            tvLower.text = card.playerCounts[3].toString()
+
+            tvUpper.setOnClickListener { listener(position, 0) }
+            tvSelf.setOnClickListener { listener(position, 1) }
+            tvPartner.setOnClickListener { listener(position, 2) }
+            tvLower.setOnClickListener { listener(position, 3) }
         }
     }
 

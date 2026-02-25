@@ -5,17 +5,107 @@
     android:orientation="vertical"
     android:padding="8dp">
 
+    <!-- 水平排列的两个按钮：编辑牌型和复位 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnEditCards"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="编辑牌型"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_round_blue"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="复位"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_round_blue"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- 固定表头：牌名、剩余、上家、自己、下家、对家（对家和下家已调换） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="4dp"
+        android:background="#EEEEEE">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="牌名"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="剩余"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="上家"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="自己"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- 下家移到对家前面 -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="下家"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="对家"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- RecyclerView 列表 -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <Button
-        android:id="@+id/btnReset"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="复位"
-        android:layout_marginTop="8dp"/>
+        android:layout_weight="1"
+        android:layout_marginTop="4dp" />
 
 </LinearLayout>
