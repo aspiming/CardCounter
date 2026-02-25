@@ -22,8 +22,8 @@
 
 ## 📱 截图
 
-![e173abe2b507574c9def84f3fdfc889d](https://github.com/user-attachments/assets/79221ccb-02f1-4ef0-91a6-5484d324c4d6)
-![2d0277ce0588d66564130e66e66a15b8](https://github.com/user-attachments/assets/c6300505-173a-4e8d-ad27-69ce5a251a4d)
+<img src="https://github.com/user-attachments/assets/79221ccb-02f1-4ef0-91a6-5484d324c4d6" width="400" alt="e173abe2b507574c9def84f3fdfc889d">
+<img src="https://github.com/user-attachments/assets/c6300505-173a-4e8d-ad27-69ce5a251a4d" width="400" alt="2d0277ce0588d66564130e66e66a15b8">
 
 ## 🚀 如何安装
 
