@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         viewModel.cards.observe(this) { cards ->
             adapter.cards = cards
         }
+        // 新增这一行，让按钮显示正确的副数
+        binding.btnDecks.text = "副数:${viewModel.decks}"
     }
 
     private fun setupRecyclerView() {

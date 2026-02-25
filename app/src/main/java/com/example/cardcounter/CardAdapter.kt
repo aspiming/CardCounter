@@ -27,8 +27,8 @@ class CardAdapter(
         fun bind(card: Card, onPlus: (Int) -> Unit, onMinus: (Int) -> Unit) {
             tvName.text = card.name
             tvCount.text = card.count.toString()
-            btnPlus.setOnClickListener { onPlus(adapterPosition) }
-            btnMinus.setOnClickListener { onMinus(adapterPosition) }
+            btnPlus.setOnClickListener { onPlus(bindingAdapterPosition) }
+            btnMinus.setOnClickListener { onMinus(bindingAdapterPosition) }
         }
     }
 
